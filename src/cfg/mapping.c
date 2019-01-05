@@ -616,7 +616,7 @@ cfg_kbd_t  cfg_key_bind[] =
 /* ------------------------------------------------------------------------ */
 /*  Action buttons.                                                         */
 /* ------------------------------------------------------------------------ */
-{ "RSHIFT", {   "PD0L_A_T",     "PD0L_A_T",     "KEYB_SHIFT",   "NA"        }},
+{ "SLASH",  {   "PD0L_A_T",     "PD0L_A_T",     "KEYB_SHIFT",   "NA"        }},
 { "RALT",   {   "PD0L_A_L",     "PD0L_A_L",     "NA",           "NA"        }},
 { "RCTRL",  {   "PD0L_A_R",     "PD0L_A_R",     "KEYB_CTRL",    "NA"        }},
 
@@ -696,7 +696,7 @@ bits |   0       1    2  3  4    5        6      7
 { "CARET",  {   "NA",           "NA",           "KEYB_CARET",   "NA"        }},
 { "HASH",   {   "NA",           "NA",           "KEYB_HASH",    "NA"        }},
 { "PLUS",   {   "NA",           "NA",           "KEYB_PLUS",    "NA"        }},
-{ "SLASH",  {   "NA",           "NA",           "KEYB_SLASH",   "NA"        }},
+//{ "SLASH",  {   "NA",           "NA",           "KEYB_SLASH",   "NA"        }},
 { "DOLLAR", {   "NA",           "NA",           "KEYB_DOLLAR",  "NA"        }},
 { "ASTERISK",{  "NA",           "NA",           "KEYB_STAR",    "NA"        }},
 { "LEFTPAREN",{ "NA",           "NA",           "KEYB_LPAREN",  "NA"        }},
@@ -726,8 +726,30 @@ bits |   0       1    2  3  4    5        6      7
 { "JS0_SE",   { "PD0L_J_SE",    "PD0L_J_SE",    "PD0L_J_SE",    "PD0L_J_SE" }},
 { "JS0_ESE",  { "PD0L_J_ESE",   "PD0L_J_ESE",   "PD0L_J_ESE",   "PD0L_J_ESE"}},
 
+
+/* ------------------------------------------------------------------------ */
+/*  Default Joystick 1 mapping.                                             */
+/* ------------------------------------------------------------------------ */
+{ "JS1_E",    { "PD0R_J_E",     "PD0R_J_E",     "PD0R_J_E",     "PD0R_J_E"  }},
+{ "JS1_ENE",  { "PD0R_J_ENE",   "PD0R_J_ENE",   "PD0R_J_ENE",   "PD0R_J_ENE"}},
+{ "JS1_NE",   { "PD0R_J_NE",    "PD0R_J_NE",    "PD0R_J_NE",    "PD0R_J_NE" }},
+{ "JS1_NNE",  { "PD0R_J_NNE",   "PD0R_J_NNE",   "PD0R_J_NNE",   "PD0R_J_NNE"}},
+{ "JS1_N",    { "PD0R_J_N",     "PD0R_J_N",     "PD0R_J_N",     "PD0R_J_N"  }},
+{ "JS1_NNW",  { "PD0R_J_NNW",   "PD0R_J_NNW",   "PD0R_J_NNW",   "PD0R_J_NNW"}},
+{ "JS1_NW",   { "PD0R_J_NW",    "PD0R_J_NW",    "PD0R_J_NW",    "PD0R_J_NW" }},
+{ "JS1_WNW",  { "PD0R_J_WNW",   "PD0R_J_WNW",   "PD0R_J_WNW",   "PD0R_J_WNW"}},
+{ "JS1_W",    { "PD0R_J_W",     "PD0R_J_W",     "PD0R_J_W",     "PD0R_J_W"  }},
+{ "JS1_WSW",  { "PD0R_J_WSW",   "PD0R_J_WSW",   "PD0R_J_WSW",   "PD0R_J_WSW"}},
+{ "JS1_SW",   { "PD0R_J_SW",    "PD0R_J_SW",    "PD0R_J_SW",    "PD0R_J_SW" }},
+{ "JS1_SSW",  { "PD0R_J_SSW",   "PD0R_J_SSW",   "PD0R_J_SSW",   "PD0R_J_SSW"}},
+{ "JS1_S",    { "PD0R_J_S",     "PD0R_J_S",     "PD0R_J_S",     "PD0R_J_S"  }},
+{ "JS1_SSE",  { "PD0R_J_SSE",   "PD0R_J_SSE",   "PD0R_J_SSE",   "PD0R_J_SSE"}},
+{ "JS1_SE",   { "PD0R_J_SE",    "PD0R_J_SE",    "PD0R_J_SE",    "PD0R_J_SE" }},
+{ "JS1_ESE",  { "PD0R_J_ESE",   "PD0R_J_ESE",   "PD0R_J_ESE",   "PD0R_J_ESE"}},
+
+// Remove all other default JS0/1 bindings, use keymapper for all other commands.
 #ifndef GP2X
-{"JS0_BTN_00",{ "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T"  }},
+/*{"JS0_BTN_00",{ "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T"  }},
 {"JS0_BTN_01",{ "PD0L_A_L",     "PD0L_A_L",     "PD0L_A_L",     "PD0L_A_L"  }},
 {"JS0_BTN_02",{ "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R"  }},
 {"JS0_BTN_03",{ "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T"  }},
@@ -735,19 +757,19 @@ bits |   0       1    2  3  4    5        6      7
 {"JS0_BTN_05",{ "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R"  }},
 {"JS0_BTN_06",{ "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T",     "PD0L_A_T"  }},
 {"JS0_BTN_07",{ "PD0L_A_L",     "PD0L_A_L",     "PD0L_A_L",     "PD0L_A_L"  }},
-{"JS0_BTN_08",{ "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R"  }},
+{"JS0_BTN_08",{ "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R",     "PD0L_A_R"  }},*/
 
 #else /* GP2X specific mappings. */
 
 /* Directional controller */
-{"JS0_BTN_00",{ "PD0L_D_N" ,    "PD0L_D_N" ,    "PD0L_D_N" ,    "PD0L_D_N"  }},
+/*{"JS0_BTN_00",{ "PD0L_D_N" ,    "PD0L_D_N" ,    "PD0L_D_N" ,    "PD0L_D_N"  }},
 {"JS0_BTN_01",{ "PD0L_D_NW",    "PD0L_D_NW",    "PD0L_D_NW",    "PD0L_D_NW" }},
 {"JS0_BTN_02",{ "PD0L_D_W" ,    "PD0L_D_W" ,    "PD0L_D_W" ,    "PD0L_D_W"  }},
 {"JS0_BTN_03",{ "PD0L_D_SW",    "PD0L_D_SW",    "PD0L_D_SW",    "PD0L_D_SW" }},
 {"JS0_BTN_04",{ "PD0L_D_S" ,    "PD0L_D_S" ,    "PD0L_D_S" ,    "PD0L_D_S"  }},
 {"JS0_BTN_05",{ "PD0L_D_SE",    "PD0L_D_SE",    "PD0L_D_SE",    "PD0L_D_SE" }},
 {"JS0_BTN_06",{ "PD0L_D_E" ,    "PD0L_D_E" ,    "PD0L_D_E" ,    "PD0L_D_E"  }},
-{"JS0_BTN_07",{ "PD0L_D_NE",    "PD0L_D_NE",    "PD0L_D_NE",    "PD0L_D_NE" }},
+{"JS0_BTN_07",{ "PD0L_D_NE",    "PD0L_D_NE",    "PD0L_D_NE",    "PD0L_D_NE" }},*/
 
 /* Others:  Action, Volume, Quit, etc. */
 /* GP2X button mapping:
@@ -764,7 +786,7 @@ bits |   0       1    2  3  4    5        6      7
     JS0_BTN_18  # stick press, used for shifting to map 1
 */
 
-{"JS0_BTN_08",{ "PD0R_KPE",   "QUIT"    ,   "PD0R_KPE",   "QUIT"       }},
+/*{"JS0_BTN_08",{ "PD0R_KPE",   "QUIT"    ,   "PD0R_KPE",   "QUIT"       }},
 {"JS0_BTN_09",{ "PD0R_KPC",   "RESET"   ,   "PD0R_KPC",   "RESET"      }},
 {"JS0_BTN_10",{ "PD0L_D_W",   "PD0R_KP1",   "PD0L_D_W",   "PD0R_KP1"   }},
 {"JS0_BTN_11",{ "PD0L_D_E",   "PD0R_KP2",   "PD0L_D_E",   "PD0R_KP2"   }},
@@ -774,18 +796,18 @@ bits |   0       1    2  3  4    5        6      7
 {"JS0_BTN_15",{ "PD0L_A_L",   "PD0R_KP6",   "PD0L_A_L",   "PD0R_KP6"   }},
 {"JS0_BTN_16",{ "VOLUP"   ,   "PD0R_KP8",   "VOLUP"   ,   "PD0R_KP8"   }},
 {"JS0_BTN_17",{ "VOLDN"   ,   "PD0R_KP7",   "VOLDN"   ,   "PD0R_KP7"   }},
-{"JS0_BTN_18",{ "SHF10"   ,   "SHF10"   ,   "SHF10"   ,   "SHF10"      }},
+{"JS0_BTN_18",{ "SHF10"   ,   "SHF10"   ,   "SHF10"   ,   "SHF10"      }},*/
 #endif
 
 #ifndef WII
-{"JS0_HAT0_E", {"PD0R_KP6",     "PD0R_KP6",     "PD0R_KP6",     "PD0R_KP6"  }},
+/*{"JS0_HAT0_E", {"PD0R_KP6",     "PD0R_KP6",     "PD0R_KP6",     "PD0R_KP6"  }},
 {"JS0_HAT0_NE",{"PD0R_KP3",     "PD0R_KP3",     "PD0R_KP3",     "PD0R_KP3"  }},
 {"JS0_HAT0_N", {"PD0R_KP2",     "PD0R_KP2",     "PD0R_KP2",     "PD0R_KP2"  }},
 {"JS0_HAT0_NW",{"PD0R_KP1",     "PD0R_KP1",     "PD0R_KP1",     "PD0R_KP1"  }},
 {"JS0_HAT0_W", {"PD0R_KP4",     "PD0R_KP4",     "PD0R_KP4",     "PD0R_KP4"  }},
 {"JS0_HAT0_SW",{"PD0R_KP7",     "PD0R_KP7",     "PD0R_KP7",     "PD0R_KP7"  }},
 {"JS0_HAT0_S", {"PD0R_KP8",     "PD0R_KP8",     "PD0R_KP8",     "PD0R_KP8"  }},
-{"JS0_HAT0_SE",{"PD0R_KP9",     "PD0R_KP9",     "PD0R_KP9",     "PD0R_KP9"  }},
+{"JS0_HAT0_SE",{"PD0R_KP9",     "PD0R_KP9",     "PD0R_KP9",     "PD0R_KP9"  }},*/
 #else /* WII Specific Bindings */
 
 {"JS0_BTN_09", {"PD0L_KPE",     "QUIT"    ,     "PD0R_KPE",     "QUIT"      }},
