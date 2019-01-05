@@ -1,0 +1,8 @@
+*.exe
+*.rom
+*.bin
+*.cfg
+*.o
+*.lst
+*.sym
+*.smap
