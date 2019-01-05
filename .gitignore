@@ -6,3 +6,4 @@
 *.lst
 *.sym
 *.smap
+src/nbproject/
